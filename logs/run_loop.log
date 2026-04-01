@@ -1,0 +1,2270 @@
+==============================
+RUN: Tue Mar 31 20:44:36 IST 2026
+==============================
+<frozen runpy>:128: RuntimeWarning: 'tip_v1.discovery.orchestrator' found in sys.modules after import of package 'tip_v1.discovery', but prior to execution of 'tip_v1.discovery.orchestrator'; this may result in unpredictable behaviour
+[WARNING] Enrichment skipped — path metrics not computed.
+==============================
+RUN: Tue Mar 31 20:46:30 IST 2026
+==============================
+==============================
+RUN: Tue Mar 31 20:46:59 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=0 processed=20 promoted=6 profiled=6 ranked=5
+=== PROGRESS ===
+  No previous monitor run yet.
+  Candidates:   133
+  Profiled:     13
+  Ranked:       5
+  Good traders: 0
+
+=== DISCOVERY FUNNEL ===
+  NEW                       88    66%
+  PROMOTED                   2     2%
+  PROFILED                  13    10%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        30    23%
+  TOTAL                    133
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 13   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           13  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 13   Avg: 0.178
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.4–0.7        2  ███░░░░░░░░░░░░░░░░░
+  0.2–0.4        3  █████░░░░░░░░░░░░░░░
+  < 0.2          8  ████████████░░░░░░░░
+
+=== TRADER TYPES ===
+  NOISE                         9   69%  ██████████░░░░░
+  STRUCTURED_INVENTORY          2   15%  ██░░░░░░░░░░░░░
+  MOMENTUM                      2   15%  ██░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0x3139...9e2e          C   0.169   0.000      0.439       n/a  NOISE
+  0x29bc...683c          C   0.114   0.000      0.216       n/a  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    11.82 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      0
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                       5.48 MB
+    trade_events                     1.39 MB
+    positions_reconstructed          0.69 MB
+    idx_trade_events_wallet_market_outcome_time     0.60 MB
+    sqlite_autoindex_trade_events_1     0.57 MB
+    sqlite_autoindex_trades_raw_1     0.42 MB
+    idx_trade_events_market          0.37 MB
+    idx_trade_events_wallet_time     0.33 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 20:59:55 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=0 processed=20 promoted=8 profiled=8 ranked=10
+=== PROGRESS ===
+  Candidates:     133   (+0)
+  Profiled:        21   (+8)
+  Ranked:          10   (+5)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                       68    51%
+  PROMOTED                   2     2%
+  PROFILED                  21    16%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        42    32%
+  TOTAL                    133
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 21   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           21  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 21   Avg: 0.212
+
+  > 0.7          1  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7        2  ██░░░░░░░░░░░░░░░░░░
+  0.2–0.4        7  ███████░░░░░░░░░░░░░
+  < 0.2         11  ██████████░░░░░░░░░░
+
+=== TRADER TYPES ===
+  NOISE                        17   81%  ████████████░░░
+  STRUCTURED_INVENTORY          2   10%  █░░░░░░░░░░░░░░
+  MOMENTUM                      2   10%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0x6916...2fd4          C   0.224   0.000      0.725   -0.0039  NOISE
+  0x86fc...bfad          C   0.214   0.000      0.330    0.0017  NOISE
+  0x61bc...6d0b          C   0.187   0.000      0.300    0.0000  NOISE
+  0x3139...9e2e          C   0.169   0.000      0.439       n/a  NOISE
+  0x29bc...683c          C   0.114   0.000      0.216       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    17.63 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      0
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                       8.06 MB
+    trade_events                     2.17 MB
+    positions_reconstructed          1.07 MB
+    idx_trade_events_wallet_market_outcome_time     0.95 MB
+    sqlite_autoindex_trade_events_1     0.88 MB
+    sqlite_autoindex_trades_raw_1     0.60 MB
+    idx_trade_events_market          0.56 MB
+    idx_trade_events_wallet_time     0.53 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 21:10:39 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=0 processed=20 promoted=9 profiled=9 ranked=14
+=== PROGRESS ===
+  Candidates:     133   (+0)
+  Profiled:        30   (+9)
+  Ranked:          14   (+4)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                       48    36%
+  PROMOTED                   2     2%
+  PROFILED                  30    23%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        53    40%
+  TOTAL                    133
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 30   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           30  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 30   Avg: 0.208
+
+  > 0.7          1  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7        3  ██░░░░░░░░░░░░░░░░░░
+  0.2–0.4       10  ███████░░░░░░░░░░░░░
+  < 0.2         16  ███████████░░░░░░░░░
+
+=== TRADER TYPES ===
+  NOISE                        25   83%  ████████████░░░
+  MOMENTUM                      3   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    7%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0xa42f...5f5a          C   0.256   0.000      0.625    0.0016  NOISE
+  0x6916...2fd4          C   0.224   0.000      0.725   -0.0039  NOISE
+  0x86fc...bfad          C   0.214   0.000      0.330    0.0017  NOISE
+  0x61bc...6d0b          C   0.187   0.000      0.300    0.0000  NOISE
+  0x3139...9e2e          C   0.169   0.000      0.439       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    24.75 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      0
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      11.26 MB
+    trade_events                     3.13 MB
+    positions_reconstructed          1.49 MB
+    idx_trade_events_wallet_market_outcome_time     1.39 MB
+    sqlite_autoindex_trade_events_1     1.27 MB
+    sqlite_autoindex_trades_raw_1     0.89 MB
+    idx_trade_events_market          0.84 MB
+    idx_trade_events_wallet_time     0.76 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 21:25:19 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=0 processed=20 promoted=7 profiled=7 ranked=18
+=== PROGRESS ===
+  Candidates:     133   (+0)
+  Profiled:        37   (+7)
+  Ranked:          18   (+4)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                       28    21%
+  PROMOTED                   2     2%
+  PROFILED                  37    28%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        66    50%
+  TOTAL                    133
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 37   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           37  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 37   Avg: 0.233
+
+  > 0.7          3  ██░░░░░░░░░░░░░░░░░░
+  0.4–0.7        4  ██░░░░░░░░░░░░░░░░░░
+  0.2–0.4       11  ██████░░░░░░░░░░░░░░
+  < 0.2         19  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 37
+
+  Total PnL:
+    > $1000       1
+    $100-$1000    2
+    < $100       34
+
+  PnL/day:
+    > $200        2
+    $50-$200      1
+    < $50        34
+
+=== TRADER TYPES ===
+  NOISE                        31   84%  █████████████░░
+  MOMENTUM                      4   11%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    5%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0xa42f...5f5a          C   0.256   0.000      0.625    0.0016  NOISE
+  0xdc66...0533          C   0.247   0.000      0.776   -0.0436  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    30.59 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      0
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      13.95 MB
+    trade_events                     3.90 MB
+    positions_reconstructed          1.83 MB
+    idx_trade_events_wallet_market_outcome_time     1.76 MB
+    sqlite_autoindex_trade_events_1     1.60 MB
+    sqlite_autoindex_trades_raw_1     1.07 MB
+    idx_trade_events_market          1.03 MB
+    idx_trade_events_wallet_time     0.96 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 22:44:29 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=0 processed=20 promoted=13 profiled=13 ranked=25
+=== PROGRESS ===
+  Candidates:     133   (+0)
+  Profiled:        50   (+13)
+  Ranked:          25   (+7)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        8     6%
+  PROMOTED                   2     2%
+  PROFILED                  50    38%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        73    55%
+  TOTAL                    133
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 50   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           50  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 50   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7        9  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       13  █████░░░░░░░░░░░░░░░
+  < 0.2         25  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 50
+
+  Total PnL:
+    > $1000       2
+    $100-$1000    2
+    < $100       46
+
+  PnL/day:
+    > $200        2
+    $50-$200      1
+    < $50        47
+
+=== TRADER TYPES ===
+  NOISE                        44   88%  █████████████░░
+  MOMENTUM                      4    8%  █░░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    4%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0xa42f...5f5a          C   0.256   0.000      0.625    0.0016  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    37.96 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      0
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      17.21 MB
+    trade_events                     4.87 MB
+    positions_reconstructed          2.27 MB
+    idx_trade_events_wallet_market_outcome_time     2.23 MB
+    sqlite_autoindex_trade_events_1     2.00 MB
+    sqlite_autoindex_trades_raw_1     1.31 MB
+    idx_trade_events_market          1.28 MB
+    idx_trade_events_wallet_time     1.25 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 22:59:03 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+Traceback (most recent call last):
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/discovery/orchestrator.py", line 358, in process_candidates
+    promote_wallet(settings, wallet)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/discovery/orchestrator.py", line 321, in promote_wallet
+    run_pipeline(wallet, settings=settings, skip_enrichment=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/main.py", line 51, in run_pipeline
+    ingestion_result = ingest_trades(
+        wallet,
+    ...<6 lines>...
+        target_unique_count=target_unique_count,
+    )
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/ingestion/fetch_trades.py", line 226, in ingest_trades
+    inserted, duplicates = ingest_trade_payloads(wallet, trades, settings)
+                           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/ingestion/fetch_trades.py", line 170, in ingest_trade_payloads
+    cursor = connection.execute(
+        """
+    ...<3 lines>...
+        (wallet, raw_json, dedupe_key),
+    )
+sqlite3.OperationalError: database is locked
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/discovery/orchestrator.py", line 514, in <module>
+    main()
+    ~~~~^^
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/discovery/orchestrator.py", line 493, in main
+    result = run_discovery_cycle(
+        settings,
+    ...<6 lines>...
+        prefilter_trade_limit=args.prefilter_trade_limit,
+    )
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/discovery/orchestrator.py", line 461, in run_discovery_cycle
+    processed_count, promoted_count = process_candidates(
+                                      ~~~~~~~~~~~~~~~~~~^
+        settings,
+        ^^^^^^^^^
+        limit=candidate_process_limit,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        prefilter_trade_limit=prefilter_trade_limit,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/discovery/orchestrator.py", line 361, in process_candidates
+    _mark_error(settings, wallet, error)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/discovery/orchestrator.py", line 299, in _mark_error
+    connection.execute(
+    ~~~~~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<12 lines>...
+        ),
+        ^^
+    )
+    ^
+sqlite3.OperationalError: database is locked
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/cli/monitor.py", line 538, in <module>
+    main()
+    ~~~~^^
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/cli/monitor.py", line 534, in main
+    print_monitor(settings=settings, top_n=args.top)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/cli/monitor.py", line 517, in print_monitor
+    save_monitor_snapshot(settings)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/vishalpatil/Desktop/Polymarket-scrapper/tip_v1/cli/monitor.py", line 92, in save_monitor_snapshot
+    connection.execute(
+    ~~~~~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<10 lines>...
+        ),
+        ^^
+    )
+    ^
+sqlite3.OperationalError: database is locked
+=== PROGRESS ===
+  Candidates:     137   (+4)
+  Profiled:        53   (+3)
+  Ranked:          25   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        6     4%
+  PROMOTED                   3     2%
+  PROFILED                  53    39%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        75    55%
+  TOTAL                    137
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 53   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           53  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 53   Avg: 0.256
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       11  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       13  █████░░░░░░░░░░░░░░░
+  < 0.2         26  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 53
+
+  Total PnL:
+    > $1000       2
+    $100-$1000    2
+    < $100       49
+
+  PnL/day:
+    > $200        2
+    $50-$200      1
+    < $50        50
+
+=== TRADER TYPES ===
+  NOISE                        47   89%  █████████████░░
+  MOMENTUM                      4    8%  █░░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    4%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0xa42f...5f5a          C   0.256   0.000      0.625    0.0016  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    39.27 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      0
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      17.62 MB
+    trade_events                     5.00 MB
+    positions_reconstructed          2.34 MB
+    idx_trade_events_wallet_market_outcome_time     2.29 MB
+    sqlite_autoindex_trade_events_1     2.05 MB
+    sqlite_autoindex_trades_raw_1     1.34 MB
+    idx_trade_events_market          1.30 MB
+    idx_trade_events_wallet_time     1.30 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 23:10:14 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=0 processed=6 promoted=3 profiled=3 ranked=28
+=== PROGRESS ===
+  Candidates:     137   (+4)
+  Profiled:        56   (+6)
+  Ranked:          28   (+3)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  56    41%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        78    57%
+  TOTAL                    137
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 56   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           56  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 56   Avg: 0.255
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       13  █████░░░░░░░░░░░░░░░
+  < 0.2         28  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 56
+
+  Total PnL:
+    > $1000       2
+    $100-$1000    2
+    < $100       52
+
+  PnL/day:
+    > $200        2
+    $50-$200      1
+    < $50        53
+
+=== TRADER TYPES ===
+  NOISE                        49   88%  █████████████░░
+  MOMENTUM                      5    9%  █░░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    4%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0xa42f...5f5a          C   0.256   0.000      0.625    0.0016  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    40.72 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      18.17 MB
+    trade_events                     5.18 MB
+    positions_reconstructed          2.43 MB
+    idx_trade_events_wallet_market_outcome_time     2.39 MB
+    sqlite_autoindex_trade_events_1     2.13 MB
+    sqlite_autoindex_trades_raw_1     1.39 MB
+    idx_trade_events_wallet_time     1.36 MB
+    idx_trade_events_market          1.34 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 23:21:19 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=28
+=== PROGRESS ===
+  Candidates:     137   (+0)
+  Profiled:        56   (+0)
+  Ranked:          28   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  56    41%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        78    57%
+  TOTAL                    137
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 56   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           56  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 56   Avg: 0.255
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       13  █████░░░░░░░░░░░░░░░
+  < 0.2         28  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 56
+
+  Total PnL:
+    > $1000       2
+    $100-$1000    2
+    < $100       52
+
+  PnL/day:
+    > $200        2
+    $50-$200      1
+    < $50        53
+
+=== TRADER TYPES ===
+  NOISE                        49   88%  █████████████░░
+  MOMENTUM                      5    9%  █░░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    4%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0xa42f...5f5a          C   0.256   0.000      0.625    0.0016  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    40.79 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      18.17 MB
+    trade_events                     5.18 MB
+    positions_reconstructed          2.43 MB
+    idx_trade_events_wallet_market_outcome_time     2.39 MB
+    sqlite_autoindex_trade_events_1     2.13 MB
+    sqlite_autoindex_trades_raw_1     1.39 MB
+    idx_trade_events_wallet_time     1.36 MB
+    idx_trade_events_market          1.34 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 23:31:30 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=28
+=== PROGRESS ===
+  Candidates:     137   (+0)
+  Profiled:        56   (+0)
+  Ranked:          28   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  56    41%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        78    57%
+  TOTAL                    137
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 56   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           56  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 56   Avg: 0.255
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       13  █████░░░░░░░░░░░░░░░
+  < 0.2         28  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 56
+
+  Total PnL:
+    > $1000       2
+    $100-$1000    2
+    < $100       52
+
+  PnL/day:
+    > $200        2
+    $50-$200      1
+    < $50        53
+
+=== TRADER TYPES ===
+  NOISE                        49   88%  █████████████░░
+  MOMENTUM                      5    9%  █░░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    4%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0xa42f...5f5a          C   0.256   0.000      0.625    0.0016  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    40.87 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      18.17 MB
+    trade_events                     5.18 MB
+    positions_reconstructed          2.43 MB
+    idx_trade_events_wallet_market_outcome_time     2.39 MB
+    sqlite_autoindex_trade_events_1     2.13 MB
+    sqlite_autoindex_trades_raw_1     1.39 MB
+    idx_trade_events_wallet_time     1.36 MB
+    idx_trade_events_market          1.34 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 23:41:40 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=28
+=== PROGRESS ===
+  Candidates:     137   (+0)
+  Profiled:        56   (+0)
+  Ranked:          28   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  56    41%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        78    57%
+  TOTAL                    137
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 56   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           56  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 56   Avg: 0.255
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       13  █████░░░░░░░░░░░░░░░
+  < 0.2         28  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 56
+
+  Total PnL:
+    > $1000       2
+    $100-$1000    2
+    < $100       52
+
+  PnL/day:
+    > $200        2
+    $50-$200      1
+    < $50        53
+
+=== TRADER TYPES ===
+  NOISE                        49   88%  █████████████░░
+  MOMENTUM                      5    9%  █░░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    4%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+  0xa42f...5f5a          C   0.256   0.000      0.625    0.0016  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    40.94 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      18.17 MB
+    trade_events                     5.18 MB
+    positions_reconstructed          2.43 MB
+    idx_trade_events_wallet_market_outcome_time     2.39 MB
+    sqlite_autoindex_trade_events_1     2.13 MB
+    sqlite_autoindex_trades_raw_1     1.39 MB
+    idx_trade_events_wallet_time     1.36 MB
+    idx_trade_events_market          1.34 MB
+Sleeping 10 minutes...
+==============================
+RUN: Tue Mar 31 23:51:52 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=4 processed=4 promoted=3 profiled=3 ranked=29
+=== PROGRESS ===
+  Candidates:     141   (+4)
+  Profiled:        59   (+3)
+  Ranked:          29   (+1)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  59    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        79    56%
+  TOTAL                    141
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 59   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           59  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 59   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         30  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 59
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       53
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        54
+
+=== TRADER TYPES ===
+  NOISE                        51   86%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    43.38 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      19.28 MB
+    trade_events                     5.50 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_wallet_market_outcome_time     2.53 MB
+    sqlite_autoindex_trade_events_1     2.26 MB
+    sqlite_autoindex_trades_raw_1     1.46 MB
+    idx_trade_events_wallet_time     1.45 MB
+    idx_trade_events_market          1.42 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 00:03:20 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=29
+=== PROGRESS ===
+  Candidates:     141   (+0)
+  Profiled:        59   (+0)
+  Ranked:          29   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  59    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        79    56%
+  TOTAL                    141
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 59   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           59  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 59   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         30  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 59
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       53
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        54
+
+=== TRADER TYPES ===
+  NOISE                        51   86%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    43.45 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      19.28 MB
+    trade_events                     5.50 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_wallet_market_outcome_time     2.53 MB
+    sqlite_autoindex_trade_events_1     2.26 MB
+    sqlite_autoindex_trades_raw_1     1.46 MB
+    idx_trade_events_wallet_time     1.45 MB
+    idx_trade_events_market          1.42 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 00:13:29 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=29
+=== PROGRESS ===
+  Candidates:     141   (+0)
+  Profiled:        59   (+0)
+  Ranked:          29   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  59    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        79    56%
+  TOTAL                    141
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 59   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           59  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 59   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         30  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 59
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       53
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        54
+
+=== TRADER TYPES ===
+  NOISE                        51   86%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    43.55 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      19.28 MB
+    trade_events                     5.50 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_wallet_market_outcome_time     2.53 MB
+    sqlite_autoindex_trade_events_1     2.26 MB
+    sqlite_autoindex_trades_raw_1     1.46 MB
+    idx_trade_events_wallet_time     1.45 MB
+    idx_trade_events_market          1.42 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 00:23:38 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=29
+=== PROGRESS ===
+  Candidates:     141   (+0)
+  Profiled:        59   (+0)
+  Ranked:          29   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  59    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        79    56%
+  TOTAL                    141
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 59   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           59  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 59   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         30  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 59
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       53
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        54
+
+=== TRADER TYPES ===
+  NOISE                        51   86%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    43.61 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      19.28 MB
+    trade_events                     5.50 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_wallet_market_outcome_time     2.53 MB
+    sqlite_autoindex_trade_events_1     2.26 MB
+    sqlite_autoindex_trades_raw_1     1.46 MB
+    idx_trade_events_wallet_time     1.45 MB
+    idx_trade_events_market          1.42 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 00:33:47 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=29
+=== PROGRESS ===
+  Candidates:     141   (+0)
+  Profiled:        59   (+0)
+  Ranked:          29   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  59    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        79    56%
+  TOTAL                    141
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 59   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           59  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 59   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         30  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 59
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       53
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        54
+
+=== TRADER TYPES ===
+  NOISE                        51   86%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    43.69 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      19.28 MB
+    trade_events                     5.50 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_wallet_market_outcome_time     2.53 MB
+    sqlite_autoindex_trade_events_1     2.26 MB
+    sqlite_autoindex_trades_raw_1     1.46 MB
+    idx_trade_events_wallet_time     1.45 MB
+    idx_trade_events_market          1.42 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 00:43:59 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=29
+=== PROGRESS ===
+  Candidates:     141   (+0)
+  Profiled:        59   (+0)
+  Ranked:          29   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  59    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        79    56%
+  TOTAL                    141
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 59   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           59  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 59   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         30  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 59
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       53
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        54
+
+=== TRADER TYPES ===
+  NOISE                        51   86%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    43.75 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      19.28 MB
+    trade_events                     5.50 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_wallet_market_outcome_time     2.53 MB
+    sqlite_autoindex_trade_events_1     2.26 MB
+    sqlite_autoindex_trades_raw_1     1.46 MB
+    idx_trade_events_wallet_time     1.45 MB
+    idx_trade_events_market          1.42 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 00:54:09 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=29
+=== PROGRESS ===
+  Candidates:     141   (+0)
+  Profiled:        59   (+0)
+  Ranked:          29   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  59    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        79    56%
+  TOTAL                    141
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 59   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           59  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 59   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         30  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 59
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       53
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        54
+
+=== TRADER TYPES ===
+  NOISE                        51   86%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    43.82 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      19.28 MB
+    trade_events                     5.50 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_wallet_market_outcome_time     2.53 MB
+    sqlite_autoindex_trade_events_1     2.26 MB
+    sqlite_autoindex_trades_raw_1     1.46 MB
+    idx_trade_events_wallet_time     1.45 MB
+    idx_trade_events_market          1.42 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 01:04:19 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=29
+=== PROGRESS ===
+  Candidates:     141   (+0)
+  Profiled:        59   (+0)
+  Ranked:          29   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  59    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        79    56%
+  TOTAL                    141
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 59   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           59  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 59   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         30  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 59
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       53
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        54
+
+=== TRADER TYPES ===
+  NOISE                        51   86%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    43.87 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      19.28 MB
+    trade_events                     5.50 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_wallet_market_outcome_time     2.53 MB
+    sqlite_autoindex_trade_events_1     2.26 MB
+    sqlite_autoindex_trades_raw_1     1.46 MB
+    idx_trade_events_wallet_time     1.45 MB
+    idx_trade_events_market          1.42 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 01:11:15 IST 2026
+==============================
+[DISCOVERY] discovered=0 processed=0 promoted=0 profiled=0 ranked=29
+=== PROGRESS ===
+  Candidates:     141   (+0)
+  Profiled:        59   (+0)
+  Ranked:          29   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  59    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        79    56%
+  TOTAL                    141
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 59   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           59  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 59   Avg: 0.249
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         30  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 59
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       53
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        54
+
+=== TRADER TYPES ===
+  NOISE                        51   86%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  █░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    43.94 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      19.28 MB
+    trade_events                     5.50 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_wallet_market_outcome_time     2.53 MB
+    sqlite_autoindex_trade_events_1     2.26 MB
+    sqlite_autoindex_trades_raw_1     1.46 MB
+    idx_trade_events_wallet_time     1.45 MB
+    idx_trade_events_market          1.42 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 03:11:14 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=2 processed=2 promoted=1 profiled=1 ranked=29
+=== PROGRESS ===
+  Candidates:     143   (+2)
+  Profiled:        60   (+1)
+  Ranked:          29   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  60    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        80    56%
+  TOTAL                    143
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 60   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           60  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 60   Avg: 0.245
+
+  > 0.7          3  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         31  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 60
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       54
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        55
+
+=== TRADER TYPES ===
+  NOISE                        52   87%  █████████████░░
+  MOMENTUM                      6   10%  ██░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  ░░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    51.52 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      22.71 MB
+    trade_events                     6.82 MB
+    idx_trade_events_wallet_market_outcome_time     3.15 MB
+    sqlite_autoindex_trade_events_1     2.84 MB
+    positions_reconstructed          2.58 MB
+    idx_trade_events_market          1.77 MB
+    sqlite_autoindex_trades_raw_1     1.74 MB
+    idx_trade_events_wallet_time     1.72 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 03:21:55 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=4 processed=4 promoted=2 profiled=2 ranked=30
+=== PROGRESS ===
+  Candidates:     147   (+4)
+  Profiled:        62   (+2)
+  Ranked:          30   (+1)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                        0     0%
+  PROMOTED                   3     2%
+  PROFILED                  62    42%
+  RANKED                     0     0%
+  PREFILTER_REJECTED        82    56%
+  TOTAL                    147
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 62   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           62  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 62   Avg: 0.250
+
+  > 0.7          4  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  █████░░░░░░░░░░░░░░░
+  < 0.2         32  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 62
+
+  Total PnL:
+    > $1000       4
+    $100-$1000    2
+    < $100       56
+
+  PnL/day:
+    > $200        4
+    $50-$200      1
+    < $50        57
+
+=== TRADER TYPES ===
+  NOISE                        54   87%  █████████████░░
+  MOMENTUM                      6   10%  █░░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  ░░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0x3d49...cda7          C   0.472   0.000      0.803    1.0630  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x89b5...8beb          C   0.292   0.000      0.290       n/a  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0x3d49...cda7         1.0630      0.803  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    53.69 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      23.82 MB
+    trade_events                     7.11 MB
+    idx_trade_events_wallet_market_outcome_time     3.29 MB
+    sqlite_autoindex_trade_events_1     2.95 MB
+    positions_reconstructed          2.62 MB
+    idx_trade_events_market          1.86 MB
+    sqlite_autoindex_trades_raw_1     1.84 MB
+    idx_trade_events_wallet_time     1.79 MB
+Sleeping 10 minutes...
+==============================
+RUN: Wed Apr  1 09:47:02 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+==============================
+RUN: Wed Apr  1 09:49:22 IST 2026
+==============================
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[WARNING] Enrichment skipped — path metrics not computed.
+[DISCOVERY] discovered=0 processed=19 promoted=18 profiled=18 ranked=29
+=== PROGRESS ===
+  Candidates:     199   (+52)
+  Profiled:        60   (-2)
+  Ranked:          30   (+0)
+  Good traders:     0   (+0)
+
+=== DISCOVERY FUNNEL ===
+  NEW                       52    26%
+  PROMOTED                   2     1%
+  PROFILED                  60    30%
+  RANKED                     0     0%
+  ERROR                      1     1%
+  PREFILTER_REJECTED        84    42%
+  TOTAL                    199
+
+=== FOLLOWABILITY ===
+  Wallets profiled: 63   Avg: 0.000   Above 0.5: 0
+
+  > 0.7          0  ░░░░░░░░░░░░░░░░░░░░
+  0.5–0.7        0  ░░░░░░░░░░░░░░░░░░░░
+  0.3–0.5        0  ░░░░░░░░░░░░░░░░░░░░
+  0.1–0.3        0  ░░░░░░░░░░░░░░░░░░░░
+  = 0           63  ████████████████████
+
+=== LIFECYCLE ===
+  Wallets profiled: 63   Avg: 0.243
+
+  > 0.7          4  █░░░░░░░░░░░░░░░░░░░
+  0.4–0.7       12  ████░░░░░░░░░░░░░░░░
+  0.2–0.4       14  ████░░░░░░░░░░░░░░░░
+  < 0.2         33  ██████████░░░░░░░░░░
+
+=== PNL DISTRIBUTION ===
+  Wallets profiled: 63
+
+  Total PnL:
+    > $1000       5
+    $100-$1000    3
+    < $100       55
+
+  PnL/day:
+    > $200        5
+    $50-$200      1
+    < $50        57
+
+=== TRADER TYPES ===
+  NOISE                        55   87%  █████████████░░
+  MOMENTUM                      6   10%  █░░░░░░░░░░░░░░
+  STRUCTURED_INVENTORY          2    3%  ░░░░░░░░░░░░░░░
+
+=== TOP RANKED ===
+  wallet              tier   score  follow  lifecycle   pnl/min  type
+  -------------------------------------------------------------------
+  0xe007...548c          B   0.516   0.000      0.435    0.8674  NOISE
+  0x8b67...ad09          C   0.493   0.000      0.372   42.1730  NOISE
+  0x70ec...bb5d          C   0.491   0.000      0.390    0.5779  NOISE
+  0xdd92...6b2a          C   0.461   0.000      0.226   18.5026  MOMENTUM
+  0x2aa1...c691          C   0.459   0.000      0.224    0.1151  MOMENTUM
+  0x3d7a...ccbf          C   0.439   0.000      0.480    0.0533  NOISE
+  0x89b5...8beb          C   0.423   0.000      0.290    0.2318  NOISE
+  0x12f1...456f          C   0.416   0.000      0.574    0.0420  NOISE
+  0x7eb8...902a          C   0.316   0.000      0.227    0.0137  NOISE
+  0x3d49...cda7          C   0.268   0.000      0.755   -0.1242  NOISE
+
+=== EMERGING TRADERS ===
+  wallet               pnl/min  lifecycle  type
+  ---------------------------------------------
+  0x8b67...ad09        42.1730      0.372  NOISE
+  0xe007...548c         0.8674      0.435  NOISE
+  0x70ec...bb5d         0.5779      0.390  NOISE
+  0x3d7a...ccbf         0.0533      0.480  NOISE
+  0x12f1...456f         0.0420      0.574  NOISE
+
+=== MICROSTRUCTURE COVERAGE ===
+  No trade context data yet.
+
+=== STORAGE ===
+  DB size:                    58.43 MB
+  microstructure_raw_book:   0
+  microstructure_agg_1m:     0
+  market_price_history:      189
+  price_history_agg_1m:      0
+  micro retention check:     no data yet
+
+  Top table sizes:
+    trades_raw                      26.03 MB
+    trade_events                     7.75 MB
+    idx_trade_events_wallet_market_outcome_time     3.58 MB
+    sqlite_autoindex_trade_events_1     3.21 MB
+    positions_reconstructed          2.92 MB
+    idx_trade_events_market          2.04 MB
+    sqlite_autoindex_trades_raw_1     1.96 MB
+    idx_trade_events_wallet_time     1.93 MB
+Sleeping 10 minutes...
