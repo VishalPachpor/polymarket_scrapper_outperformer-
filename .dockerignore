@@ -1,25 +1,33 @@
-.git
+# Secrets
 .env
 .env.*
+
+# Python
 .venv
 venv
-__pycache__/
-**/__pycache__/
-*.pyc
-*.pyo
+**/__pycache__
+**/*.pyc
+**/*.pyo
+
+# Big data files (must use ** to match subdirs)
+**/*.sqlite3
+**/*.sqlite3-wal
+**/*.sqlite3-shm
+**/*.db
+**/*.csv
+**/*.log
+**/*.json
+
+# Repo junk we never need in the image
+.git
 .DS_Store
-*.sqlite3
-*.sqlite3-wal
-*.sqlite3-shm
 logs/
-*.log
-*.csv
-*.json
+research/
+tests/
+notebooks/
 ipl_*
 pre_signal_*
 rectangular_irony_*
 today_*
 top_wallets_*
 deploy/copy-trader.service
-tests/
-research/
