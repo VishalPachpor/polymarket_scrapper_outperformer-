@@ -32,9 +32,12 @@ class CopyTraderConfig:
     enable_execution: bool = False  # if True, build ExecutionIntent and call PolymarketExecutor
     only_buys: bool = False         # phase-1: only alert on opens
     min_notional_usdc: float = 25.0 # ignore dust trades
+    event_prefixes: tuple[str, ...] = ("cricipl-",)  # only alert on slugs starting with these
 
     @classmethod
     def from_env(cls) -> "CopyTraderConfig":
+        prefixes_raw = os.getenv("COPY_TRADER_EVENT_PREFIXES", "cricipl-").strip()
+        prefixes = tuple(p.strip() for p in prefixes_raw.split(",") if p.strip()) if prefixes_raw else ()
         return cls(
             poll_interval_seconds=float(os.getenv("COPY_TRADER_POLL_INTERVAL", DEFAULT_POLL_INTERVAL)),
             trades_api_url=os.getenv("TIP_TRADES_API_URL", DEFAULT_TRADES_API),
@@ -43,6 +46,7 @@ class CopyTraderConfig:
             enable_execution=os.getenv("COPY_TRADER_ENABLE_EXECUTION", "false").lower() == "true",
             only_buys=os.getenv("COPY_TRADER_ONLY_BUYS", "false").lower() == "true",
             min_notional_usdc=float(os.getenv("COPY_TRADER_MIN_NOTIONAL", "25")),
+            event_prefixes=prefixes,
         )
 
 
@@ -144,6 +148,10 @@ def _process_trade(
     if notional < config.min_notional_usdc:
         _mark_seen(db_path, tx, watched.address, trade)
         return
+    slug = str(trade.get("slug") or trade.get("eventSlug") or "")
+    if config.event_prefixes and not any(slug.startswith(p) for p in config.event_prefixes):
+        _mark_seen(db_path, tx, watched.address, trade)
+        return
 
     text, callback_data = alerter.format_trade_alert(trade, {"pseudonym": watched.pseudonym})
     alerter.send(text, copy_callback_data=callback_data)
@@ -189,9 +197,10 @@ def run_copy_trader(
         executor = PolymarketExecutor(enabled=True, dry_run=config.dry_run)
 
     logger.info(
-        "COPY_TRADER_START wallets=%d poll=%.2fs dry_run=%s execution=%s only_buys=%s min_notional=$%.0f",
+        "COPY_TRADER_START wallets=%d poll=%.2fs dry_run=%s execution=%s only_buys=%s min_notional=$%.0f prefixes=%s",
         len(watchlist), config.poll_interval_seconds, config.dry_run,
         config.enable_execution, config.only_buys, config.min_notional_usdc,
+        ",".join(config.event_prefixes) or "<all>",
     )
     for w in watchlist.values():
         logger.info("  watching %s (%s) size_pct=%.2f cap=$%.0f",

@@ -15,6 +15,7 @@ primary_region = "fra"   # Frankfurt — closest to Polymarket's API edge
   COPY_TRADER_ENABLE_EXECUTION = "false"
   COPY_TRADER_ONLY_BUYS     = "false"
   COPY_TRADER_MIN_NOTIONAL  = "25"
+  COPY_TRADER_EVENT_PREFIXES = "cricipl-"
   TIP_DB_PATH               = "/data/copy_trader.sqlite3"
 
 # Persistent volume for the SQLite tx-hash dedupe table.
