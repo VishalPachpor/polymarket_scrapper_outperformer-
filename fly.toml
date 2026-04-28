@@ -1,0 +1,35 @@
+# Fly.io config for the Polymarket smart-money copy-trader.
+# Worker app (no HTTP services) — polls Polymarket and forwards trades to Telegram.
+# Deploy with:  flyctl deploy
+
+app = "polymarket-copy-trader"
+primary_region = "fra"   # Frankfurt — closest to Polymarket's API edge
+
+[build]
+  dockerfile = "deploy/Dockerfile"
+
+[env]
+  COPY_TRADER_POLL_INTERVAL = "1.5"
+  COPY_TRADER_FETCH_LIMIT   = "20"
+  COPY_TRADER_DRY_RUN       = "true"
+  COPY_TRADER_ENABLE_EXECUTION = "false"
+  COPY_TRADER_ONLY_BUYS     = "false"
+  COPY_TRADER_MIN_NOTIONAL  = "25"
+  TIP_DB_PATH               = "/data/copy_trader.sqlite3"
+
+# Persistent volume for the SQLite tx-hash dedupe table.
+[mounts]
+  source      = "copy_trader_data"
+  destination = "/data"
+
+# One always-on machine — never auto-stop, never scale to zero.
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"
+  cpus = 1
+
+[deploy]
+  strategy = "immediate"
+
+[processes]
+  app = "python -m tip_v1.cli.run_copy_trader --log-level INFO"
