@@ -82,7 +82,8 @@ class TelegramAlerter:
             f"<i>{title[:80]}</i>\n"
             f"<a href=\"{self.market_link(slug)}\">open market</a>"
         )
-        # callback_data has a 64-byte limit on Telegram. Use trade hash if present.
+        # callback_data has a 64-byte limit on Telegram. Use a short hash prefix.
         tx = trade.get("transactionHash") or ""
-        callback_data = f"copy:{tx[:60]}" if tx else "copy:unknown"
+        short_tx = tx[2:18] if tx.startswith("0x") else tx[:16]  # 16 hex chars = 64 bits
+        callback_data = f"copy:{short_tx}" if short_tx else "copy:unknown"
         return text, callback_data
