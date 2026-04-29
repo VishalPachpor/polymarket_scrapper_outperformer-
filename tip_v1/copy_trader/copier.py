@@ -12,6 +12,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
+from tip_v1.copy_trader.position_tracker import PositionTracker
 from tip_v1.copy_trader.telegram_alerter import TelegramAlerter
 from tip_v1.copy_trader.watchlist import WatchedWallet, get_watchlist
 
@@ -132,6 +133,7 @@ def _process_trade(
     alerter: TelegramAlerter,
     executor: Any | None,
     db_path: Path,
+    tracker: PositionTracker | None = None,
 ) -> None:
     tx = str(trade.get("transactionHash") or "")
     if not tx or _is_seen(db_path, tx):
@@ -153,7 +155,28 @@ def _process_trade(
         _mark_seen(db_path, tx, watched.address, trade)
         return
 
-    text, callback_data = alerter.format_trade_alert(trade, {"pseudonym": watched.pseudonym})
+    position_dict: dict | None = None
+    if tracker is not None:
+        cid = str(trade.get("conditionId") or "")
+        asset = str(trade.get("asset") or "")
+        if cid and asset:
+            ms = tracker.get_state(watched.address, cid, asset)
+            if ms is not None:
+                position_dict = {
+                    "open_shares": ms.open_shares,
+                    "open_cost_usdc": ms.open_cost_usdc,
+                    "avg_buy_price": ms.avg_buy_price,
+                    "realized_pnl_usdc": ms.realized_pnl_usdc,
+                    "this_trade_pnl_usdc": ms.this_trade_pnl_usdc,
+                    "trade_count": ms.trade_count,
+                }
+    watched_dict = {
+        "pseudonym": watched.pseudonym,
+        "lifetime_pnl_usdc": watched.lifetime_pnl_usdc,
+        "lifetime_win_rate": watched.lifetime_win_rate,
+        "lifetime_matches": watched.lifetime_matches,
+    }
+    text, callback_data = alerter.format_trade_alert(trade, watched_dict, position=position_dict)
     alerter.send(text, copy_callback_data=callback_data)
     logger.info(
         "WATCH_HIT wallet=%s side=%s size=%.0f price=%.4f notional=$%.0f slug=%s",
@@ -191,6 +214,7 @@ def run_copy_trader(
         return
 
     alerter = TelegramAlerter()
+    tracker = PositionTracker(trades_api_url=config.trades_api_url)
     executor = None
     if config.enable_execution:
         from tip_v1.execution.executor import PolymarketExecutor  # lazy import
@@ -218,7 +242,8 @@ def run_copy_trader(
             for t in sorted(trades, key=lambda x: int(x.get("timestamp") or 0)):
                 _process_trade(
                     t, watched,
-                    config=config, alerter=alerter, executor=executor, db_path=db_path,
+                    config=config, alerter=alerter, executor=executor,
+                    db_path=db_path, tracker=tracker,
                 )
             time.sleep(0.1)  # gentle pacing between wallet polls
 
